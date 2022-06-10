@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.ganicroots.co.za/</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/products</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/login</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/contact_form</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/lifestyle</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/beauty</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/products/category/1</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/products/category/2</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/products/category/3</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/products/category/all</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/register</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/password/reset</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/blog/Organic+Oils+You+Need+to+Know+About</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.ganicroots.co.za/blog/Oil+and+Butter+Your+Way+to+Beautiful%2C+Healthy+Skin+and+Hair</loc>
+  <lastmod>2019-08-26T13:46:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
