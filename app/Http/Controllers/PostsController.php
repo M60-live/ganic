@@ -45,7 +45,7 @@ class PostsController extends Controller
   public function lifestyle()
   {
     $Blogs = $this->getBlogs('lifestyle');
-    $paginate = $Blogs->links();
+    $paginate = $Blogs;
     $categories = DB::table('category')->get();
     return view('Posts.index',['categories'=>$categories,'category_active'=>'all','heading'=>'Lifestyle','Blogs'=>$Blogs,'paginate'=>$paginate]);
   }
@@ -53,7 +53,7 @@ class PostsController extends Controller
   public function beauty()
   {
     $Blogs = $this::getBlogs('beauty');
-    $paginate=$Blogs->links();
+    $paginate=$Blogs;
     $categories = DB::table('category')->get();
     return view('Posts.index',['categories'=>$categories,'category_active'=>'all','heading'=>'Beauty','Blogs'=>$Blogs,'paginate'=>$paginate]);
   }

@@ -12,19 +12,17 @@ class ProductsController extends Controller
   function get_products_options($product_id)
   {
     $options = DB::table('product_options')
-        ->where('product_id','=',$product_id)
+        ->where('product_id','=', $product_id)
         ->select('*')
         ->get()->toArray();
     return $options;
   }
 
-  function get_products($type='product',$id='',$limit=6)
+  function get_products($type = 'product', $id = '', $limit = 6)
   {
-    if($type=='product')
+    if($type == 'product')
     {
-      if($id=='')
-      {
-
+      if($id=='') {
         $products = DB::table('products')
         ->join('category','products.categoryid','=','category.id')
         ->where('products.enabled','=','1')
@@ -32,31 +30,25 @@ class ProductsController extends Controller
         ->limit($limit)
         ->select('products.*','category.id as cat_id','category.value as category_name')
         ->paginate($limit);
-      }
-      else
-      {
+      } else {
         $products = DB::table('products')
         ->join('category','products.categoryid','=','category.id')
         ->where('products.id','=',$id)
         ->where('products.enabled','=','1')
         ->select('products.*','category.id as cat_id','category.value as category_name')
         ->paginate($limit);
-
       }
     }
     elseif($type=='category')
     {
-      if($id=='' || $id=='all')
-      {
+      if($id=='' || $id=='all') {
         $products = DB::table('products')
           ->join('category','products.categoryid','=','category.id')
           ->where('products.enabled','=','1')
           ->orderBy('products.created_at','desc')
           ->select('products.*','category.id as cat_id','category.value as category_name')
           ->paginate($limit);
-      }
-      else
-      {
+      } else {
         $products = DB::table('products')
           ->join('category','products.categoryid','=','category.id')
           ->where('category.id','=',$id)
@@ -94,7 +86,7 @@ class ProductsController extends Controller
     $categories = DB::table('category')->get();
 
     $products = $this::get_products('product','');
-    $links = $products->links();
+    $links = $products;
 
     return view('category_products',['categories'=>$categories,'category_active'=>'all','products'=>$products,'Links'=>$links]);
   }
@@ -104,7 +96,7 @@ class ProductsController extends Controller
     $categories = DB::table('category')->get();
 
     $products = $this::get_products('category',$id);
-    $links = $products->links();
+    $links = $products;
 
     return view('category_products',['categories'=>$categories,'category_active'=>$id,'products'=>$products,'Links'=>$links]);
   }
@@ -174,9 +166,8 @@ class ProductsController extends Controller
     $categories = DB::table('category')->get();
     $keyword = $request->get('keyword');
     $product = $this::get_products('search',$keyword);
-    $links = $product->links();
-//    print_r($product);
-//    die();
+    $links = $product;
+
     return view('category_products',['categories'=>$categories,'category_active'=>'all','products'=>$product,'Links'=>$links,'keyword'=>$keyword]);
   }
 

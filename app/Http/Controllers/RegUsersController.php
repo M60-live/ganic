@@ -83,7 +83,7 @@ class RegUsersController extends Controller
   public function index()
   {
     $Users = $this::get_users();
-    $paginate = $Users->links();
+    $paginate = $Users;
     $categories = DB::table('category')->get();
     return view('AdminUsers.dashboard',['categories'=>$categories,'category_active'=>'all','Users'=>$Users,'paginate'=>$paginate]);
   }

@@ -36,7 +36,7 @@ class BlogController extends Controller
   public function index()
   {
     $Blogs = $this::getBlogs();
-    $paginate=$Blogs->links();
+    $paginate=$Blogs;
     $categories = DB::table('category')->get();
     return view('Blog.dashboard',['categories'=>$categories,'category_active'=>'all','Blogs'=>$Blogs,'paginate'=>$paginate]);
   }

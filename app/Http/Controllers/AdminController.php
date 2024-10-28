@@ -11,13 +11,12 @@ use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
-  function get_products($type='product',$id='',$limit=4)
+  private function get_products($type = 'product', $id='',$limit=4)
   {
     if(strtolower($type)=='product')
     {
       if($id=='')
       {
-
         $products = DB::table('products')
           ->join('category','products.categoryid','=','category.id')
           ->orderBy('products.created_at','desc')
@@ -81,15 +80,15 @@ class AdminController extends Controller
 
   public function list_products()
   {
-    $Products = $this::get_products('product','',8);
-    $Links = $Products->links();
+    $Products = $this->get_products('product','',8);
+    $Links = $Products;
     $categories = DB::table('category')->get();
     return view('AdminProducts.list_products',['categories'=>$categories,'category_active'=>'all','Products'=>$Products,'Links'=>$Links]);
   }
 
   public function view_product($product_id)
   {
-    $Products = $this::get_products('product',$product_id);
+    $Products = $this->get_products('product',$product_id);
     $categories = DB::table('category')->get();
     $product_options = $this::get_products_options($product_id);
     return view('AdminProducts.view_product',['categories'=>$categories,'category_active'=>'all','Products'=>$Products,'product_options'=>$product_options]);
@@ -175,7 +174,7 @@ class AdminController extends Controller
 
   public function create()
   {
-    $Products = $this::get_products('product');
+    $Products = $this->get_products('product');
     $categories = DB::table('category')->get();
     return view('AdminProducts.create_product',['categories'=>$categories,'category_active'=>'all','Products'=>$Products]);
   }
@@ -239,13 +238,18 @@ class AdminController extends Controller
     $results = DB::table('products')
       ->join('cart','cart.product_id','=','products.id')
       ->select('cart.id','products.id')
-      ->where('products.id',"=",$product_id)
+      ->where('products.id',"=", $product_id)
+      ->whereNotNull('cart.dt_checkout')
       ->get()
       ->toArray();
-    if(empty($results))
+    if (empty($results))
     {
-      $can_delete=true;
-      $results = DB::table('products')
+      // Delete product from cart for people who have added to cart but not bought yet.
+      DB::table('cart')
+          ->where('cart.product_id','=',$product_id)->delete();
+
+      // Then finally delete the actual product
+      DB::table('products')
           ->where('products.id','=',$product_id)->delete();
 
       session()->flash('message', $Product[0]->value.' Deleted');
