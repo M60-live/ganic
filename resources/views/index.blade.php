@@ -207,7 +207,7 @@
 
 @section('javaScript')
   @parent
-  @include('layouts.popup')
+{{--  @include('layouts.popup')--}}
   <script type="application/javascript">
     $(document).ready(function(){
 
