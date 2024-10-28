@@ -67,7 +67,7 @@ class SystemMails extends Mailable
     if($this->mailType=='invoice')
     {
       return $this->view($mailType)
-          ->subject('Purchase Order')
+          ->subject('Purchase Order 🌻')
           ->with('name',$name)
           ->with('email',$email)
           ->with('msg',$message)
@@ -76,7 +76,7 @@ class SystemMails extends Mailable
     else
     {
       return $this->view($mailType)
-          ->subject('Ganic Roots')
+          ->subject('Ganic Roots 🌱')
           ->with('name',$name)
           ->with('email',$email)
           ->with('phone_number',$phone_number)
