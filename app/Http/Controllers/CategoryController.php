@@ -61,7 +61,7 @@ class CategoryController extends Controller
 
     public function view($category_id)
     {
-        $Categories = $this->get_categories();
+        $Categories = $this->get_categories($category_id);
         return view('Category.view',['categories'=>$Categories,'category_active'=>'all']);
     }
 
