@@ -12,7 +12,7 @@
   @foreach($orders as $order)
     <tr>
       <td align="right"><?php echo $cnt; ?></td>
-      <td width="10%"><img src="storage/products/{{ $order->img_dir }}" class="img-responsive" /></td>
+      <td width="10%"><img src="storage/products/{{ $order->img_dir.env("APP_VERSION") }}" class="img-responsive" /></td>
       <td width="30%">{{ $order->value }}<br>{{ $order->product_options }}</td>
       <td>R{{ $order->price }}</td>
       <td>{{ date("d F Y",strtotime($order->dt_successful)) }}</td>

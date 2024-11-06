@@ -39,7 +39,7 @@
                   <td width="5%">{{ $cnt  - ($Products->perPage() * ($Products->currentPage()-1)) }}</td>
                   <td width="5%"><?php echo ($product->enabled==1)?'<span class="green-dot"></span>':'<span class="red-dot"></span>' ?></td>
                   <td width="45%" align="left">
-                    <img src="{{ asset('storage/products/'.$product->img_dir) }}" class="img-fluid col-md-2 col-10" />
+                    <img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" class="img-fluid col-md-2 col-10" />
 
                     <a href="/admin/product/view_product/{{ $product->id }}" class="text-muted">{{ $product->value }}</a>
                   </td>

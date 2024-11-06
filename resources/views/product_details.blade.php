@@ -57,10 +57,10 @@
               <ul class="slides">
                 <li>
                   @if($product_details[0]->instock=='1')
-                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" />
+                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir.env("APP_VERSION")) }}" />
                   @else
                     <div class="out-of-stock">Out of stock</div>
-                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" />
+                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir.env("APP_VERSION")) }}" />
                   @endif
                 </li>
                 <li>
@@ -231,7 +231,7 @@
           @foreach($relatedProducts as $related)
           <div class="col-md-2">
               <div class="card">
-                <a href="/products/view/{{ $related->cat_id }}/{{ $related->id }}/{{ $related->category_name }}"><img src=" {{ asset('storage/products/'.$related->img_dir) }}" class="" /></a><br>
+                <a href="/products/view/{{ $related->cat_id }}/{{ $related->id }}/{{ $related->category_name }}"><img src=" {{ asset('storage/products/'.$related->img_dir.env("APP_VERSION")) }}" class="" /></a><br>
                 <p class="px-2 py-2"><small>{{ $related->value }}</small></p>
               </div>
           </div>

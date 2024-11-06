@@ -21,7 +21,7 @@
                             <div class="row">
                                 <div class="col col-md-5">
                                     <h4 class="text-center">{{ $products[0]->value }}</h4><hr>
-                                    <img src="{{ asset('storage/products/'.$products[0]->img_dir) }}" class="img-responsive img-thumbnail" />
+                                    <img src="{{ asset('storage/products/'.$products[0]->img_dir.env("APP_VERSION")) }}" class="img-responsive img-thumbnail" />
                                 </div>
                                 <div class="col col-md-7">
                                     <p class="">Are you sure you want to remove this item?</p><br>

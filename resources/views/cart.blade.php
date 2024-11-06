@@ -65,7 +65,7 @@
                       </label>
                     </div>
                     <div class="col col-md-4">
-                      <img src="{{ asset('storage/products/'.$product->img_dir) }}" class="img-responsive img-thumbnail" />
+                      <img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" class="img-responsive img-thumbnail" />
                     </div>
                     <div class="col col-md-6">
                       <h3 class="mb-0 display-5">{{ $product->value }}</h3>

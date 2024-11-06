@@ -84,7 +84,7 @@
                   <tr><td><strong>Description:</strong></td><td><textarea class="form-control" name="desc">{{ $Products[0]->desc }}</textarea></td></tr>
                   <tr><td><strong>Price:</strong></td><td>R<input type="text" name="price" class="form-control" value="{{ $Products[0]->price }}" /></td></tr>
                   <tr><td><strong>Load Image:</strong></td><td><input type="file" class="form-control" name="product_image" /></td></tr>
-                  <tr><td><strong>Image:</strong></td><td><img src="{{ asset('storage/products/'.$Products[0]->img_dir) }}" class="img-responsive" /></td></tr>
+                  <tr><td><strong>Image:</strong></td><td><img src="{{ asset('storage/products/'.$Products[0]->img_dir.env("APP_VERSION")) }}" class="img-responsive" /></td></tr>
                   @if( $Products[0]->enabled==0)
                       <tr><td><strong>Active:</strong></td><td><input type="checkbox" name="enabled" /></td></tr>
                   @else

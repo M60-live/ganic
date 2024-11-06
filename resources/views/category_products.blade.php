@@ -109,10 +109,10 @@
             <div class="product">
               <div class="product_image">
                 @if($product->instock=='1')
-                  <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir) }}" alt="" /></a>
+                  <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" alt="" /></a>
                 @else
                   <div class="out-of-stock">Out of stock</div>
-                  <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir) }}" alt="" /></a>
+                  <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" alt="" /></a>
                 @endif
 
               </div>
