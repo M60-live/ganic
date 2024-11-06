@@ -105,7 +105,7 @@ class ProductsController extends Controller
   {
     $categories = DB::table('category')->get();
     $product = $this::get_products('product',$id);
-    $relatedProducts=$this::related_products($product[0]->id,$product[0]->cat_id);
+    $relatedProducts = $this::related_products($product[0]->id,$product[0]->cat_id);
     $product_options = $this::get_products_options($product[0]->id);
     return view('product_details',['categories'=>$categories,'category_active'=>$id_category,'category_name'=>$category_name,'product_details'=>$product,'relatedProducts'=>$relatedProducts,'product_options'=>$product_options]);
   }

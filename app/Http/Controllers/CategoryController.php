@@ -70,7 +70,7 @@ class CategoryController extends Controller
         $category_id = $request->get('id');
         $category_name = $request->get('value');
 
-        $response = DB::table('Category')
+        $response = DB::table('category')
         ->where('id',$category_id)
         ->update(['value'=>$category_name,'updated_at'=>now()]);
 
