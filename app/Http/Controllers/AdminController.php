@@ -212,15 +212,17 @@ class AdminController extends Controller
           ->update(['img_dir'=>$newFileName]);
       }
 
-      if(!empty($options))
-      {
-        if($options<>null)
-        {
-          foreach($options as $option){
-            $option_id = DB::table('product_options')
-                ->insertGetId(['product_id'=>$product_id,'value'=>$option,'created_at'=>now()]);
+
+      foreach($options as $option){
+          if(!empty($option))
+          {
+              $option_id = DB::table('product_options')
+              ->insertGetId([
+                  'product_id' => $product_id,
+                  'value' => $option,
+                  'created_at' => now()
+              ]);
           }
-        }
       }
       session()->flash('message', 'Product Loaded with image');
     }
