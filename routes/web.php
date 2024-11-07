@@ -16,7 +16,11 @@
     return view('index');
 });*/
 
+
+use Illuminate\Support\Facades\Route;
+
 Auth::routes();
+Auth::routes(['verify' => true]);
 
 //Route::get('/', 'ProductsController@index');
 Route::get('/', 'HomeController@index');

@@ -11,8 +11,14 @@ use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
-  private function get_products($type = 'product', $id='',$limit=4)
-  {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
+    private function get_products($type = 'product', $id='',$limit=4)
+    {
     if(strtolower($type)=='product')
     {
       if($id=='')
@@ -55,47 +61,41 @@ class AdminController extends Controller
     }
     $Results=$products;
     return $Results;
-  }
+    }
 
-  function get_products_options($product_id)
-  {
+    function get_products_options($product_id)
+    {
     $options = DB::table('product_options')
         ->where('product_id','=',$product_id)
         ->select('*')
         ->get()->toArray();
     return $options;
-  }
+    }
 
-  public function __construct()
-  {
-    $this->middleware('auth');
-    $this->middleware('admin');
-  }
-
-  public function index()
-  {
+    public function index()
+    {
     $categories = DB::table('category')->get();
     return view('AdminProducts.dashboard',['categories'=>$categories,'category_active'=>'all']);
-  }
+    }
 
-  public function list_products()
-  {
+    public function list_products()
+    {
     $Products = $this->get_products('product','',8);
     $Links = $Products;
     $categories = DB::table('category')->get();
     return view('AdminProducts.list_products',['categories'=>$categories,'category_active'=>'all','Products'=>$Products,'Links'=>$Links]);
-  }
+    }
 
-  public function view_product($product_id)
-  {
+    public function view_product($product_id)
+    {
     $Products = $this->get_products('product',$product_id);
     $categories = DB::table('category')->get();
     $product_options = $this::get_products_options($product_id);
     return view('AdminProducts.view_product',['categories'=>$categories,'category_active'=>'all','Products'=>$Products,'product_options'=>$product_options]);
-  }
+    }
 
-  public function update_product(Request $request)
-  {
+    public function update_product(Request $request)
+    {
     $product_name = $request->get('value');
     $desc = $request->get('desc');
     $product_id = $request->get('product_id');
@@ -170,17 +170,17 @@ class AdminController extends Controller
 
     session()->flash('message', 'Product Updated');
     return redirect()->action('AdminController@list_products');
-  }
+    }
 
-  public function create()
-  {
+    public function create()
+    {
     $Products = $this->get_products('product');
     $categories = DB::table('category')->get();
     return view('AdminProducts.create_product',['categories'=>$categories,'category_active'=>'all','Products'=>$Products]);
-  }
+    }
 
-  public function create_product(Request $request)
-  {
+    public function create_product(Request $request)
+    {
     $product_name = $request->get('value');
     $desc = $request->get('desc');
     $category_id = $request->get('category_id');
@@ -228,9 +228,9 @@ class AdminController extends Controller
     }
 
     return redirect()->action('AdminController@list_products');
-  }
+    }
 
-  public function delete_product($product_id)
+    public function delete_product($product_id)
   {
     $can_delete=false;
 

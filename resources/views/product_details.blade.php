@@ -47,7 +47,7 @@
       <div class="row products_row">
 
         <div class="col col-md-12" style="margin-bottom: 15px;">
-          <a href="/products/category/{{ $product_details[0]->cat_id }}" class="btn btn-primary"><span class="fa fa-angle-left" style="color: #fff;"></span> back to {{ $product_details[0]->category_name }} category</a>
+          <a href="/products/category/{{ $product_details->categoryid }}" class="btn btn-primary"><span class="fa fa-angle-left" style="color: #fff;"></span> back to {{ $product_details->category_name }} category</a>
 {{--          <a href="{{ url()->previous() }}" class="btn btn-primary"><span class="fa fa-angle-left" style="color: #fff;"></span> back to <b>{{ $category_name }}</b> list</a>--}}
         </div>
         <!-- Product Image -->
@@ -56,18 +56,18 @@
             <div id="slider" class="flexslider">
               <ul class="slides">
                 <li>
-                  @if($product_details[0]->instock=='1')
-                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir.env("APP_VERSION")) }}" />
+                  @if($product_details->instock=='1')
+                    <img src="{{ asset('storage/products/'.$product_details->img_dir.env("APP_VERSION")) }}" />
                   @else
                     <div class="out-of-stock">Out of stock</div>
-                    <img src="{{ asset('storage/products/'.$product_details[0]->img_dir.env("APP_VERSION")) }}" />
+                    <img src="{{ asset('storage/products/'.$product_details->img_dir.env("APP_VERSION")) }}" />
                   @endif
                 </li>
                 <li>
-                  {{--<img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" />--}}
+                  {{--<img src="{{ asset('storage/products/'.$product_details->img_dir) }}" />--}}
                 </li>
                 <li>
-{{--                  <img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" />--}}
+{{--                  <img src="{{ asset('storage/products/'.$product_details->img_dir) }}" />--}}
                 </li>
               </ul>
             </div>
@@ -75,13 +75,13 @@
               <div id="carousel" class="flexslider">
                 <ul class="slides">
                   <li>
-                    <div><img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" /></div>
+                    <div><img src="{{ asset('storage/products/'.$product_details->img_dir) }}" /></div>
                   </li>
                   <li>
-                    <div><img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" /></div>
+                    <div><img src="{{ asset('storage/products/'.$product_details->img_dir) }}" /></div>
                   </li>
                   <li>
-                    <div><img src="{{ asset('storage/products/'.$product_details[0]->img_dir) }}" /></div>
+                    <div><img src="{{ asset('storage/products/'.$product_details->img_dir) }}" /></div>
                   </li>
                 </ul>
               </div>
@@ -96,7 +96,7 @@
           <div class="row">
           <div class="product_info">
             <div class="col col-md-12">
-              <div class="product_name">{{ $product_details[0]->value }}</div>
+              <div class="product_name">{{ $product_details->value }}</div>
             </div>
             <div class="col col-md-12">
               <form method="post" action="/add_to_cart" id="add_to_cart_form">
@@ -127,7 +127,7 @@
               @endif
             </div>
             <div class="col col-md-12">
-              <div class="product_category">In <a href="/products/category/{{ $product_details[0]->cat_id }}">{{ $product_details[0]->category_name }}</a></div>
+              <div class="product_category">In <a href="/products/category/{{ $product_details->categoryid }}">{{ $product_details->category_name }}</a></div>
             </div>
             {{--<div class="product_rating_container d-flex flex-row align-items-center justify-content-start">
               <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
@@ -135,7 +135,7 @@
               <div class="product_reviews_link"><a href="#">Reviews</a></div>
             </div>--}}
             <div class="col col-md-12 product-detail-container">
-              <div class="product_price">R{{ substr($product_details[0]->price,0,strpos($product_details[0]->price,".")) }}<span>{{ substr($product_details[0]->price,strpos($product_details[0]->price,".")) }}</span></div>
+              <div class="product_price">R{{ substr($product_details->price,0,strpos($product_details->price,".")) }}<span>{{ substr($product_details->price,strpos($product_details->price,".")) }}</span></div>
             </div>
             {{--<div class="col col-md-12 product-detail-container">
               <div class="product_size_title">Select Size</div>
@@ -167,7 +167,7 @@
               </ul>
             </div>--}}
             <div class="col-md-12 product-detail-container">
-              <p>{{ $product_details[0]->desc }}.</p>
+              <p>{{ $product_details->desc }}.</p>
             </div>
             <div class="col col-md-12 product-detail-container">
               <div class="row">
@@ -178,13 +178,13 @@
                       {{--<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
                         <div><div><img src="/img/heart_2.svg" class="svg" alt=""><div>+</div></div></div>
                       </div>--}}
-                        @if($product_details[0]->instock=='1')
+                        @if($product_details->instock=='1')
                           <div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center" id="add_to_cart" >
                           <div><div><img src="/img/cart.svg" class="svg" alt=""><div>+</div></div></div>
 
                                   @csrf
-                                  <input type="hidden" name="product_id" value="{{ $product_details[0]->id }}"/>
-                                  <input type="hidden" name="category_id" value="{{ $product_details[0]->cat_id }}"/>
+                                  <input type="hidden" name="product_id" value="{{ $product_details->id }}"/>
+                                  <input type="hidden" name="category_id" value="{{ $product_details->categoryid }}"/>
                               </form>
                           </div>
                         @else
@@ -231,7 +231,7 @@
           @foreach($relatedProducts as $related)
           <div class="col-md-2">
               <div class="card">
-                <a href="/products/view/{{ $related->cat_id }}/{{ $related->id }}/{{ $related->category_name }}"><img src=" {{ asset('storage/products/'.$related->img_dir.env("APP_VERSION")) }}" class="" /></a><br>
+                <a href="/products/view/{{ $related->categoryid }}/{{ $related->id }}/{{ $related->category_name }}"><img src=" {{ asset('storage/products/'.$related->img_dir.env("APP_VERSION")) }}" class="" /></a><br>
                 <p class="px-2 py-2"><small>{{ $related->value }}</small></p>
               </div>
           </div>
