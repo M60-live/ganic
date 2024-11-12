@@ -8,7 +8,7 @@
     <div class="row">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;" data-interval="10000">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" dat`a-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
@@ -17,41 +17,37 @@
           <div class="carousel-item active">
             <img class="d-block w-100" src="/img/blog/Frame.jpg" alt="First slide" />
             <div class="carousel-caption d-none d-md-block">
-              {{--<h3>Shop now</h3>--}}
-              <a href="/products" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> shop now</a>
+                <h2 class="text-white">
+                    Simple, Natural & Backed by Science
+                </h2>
+                <a href="/products" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Check Our Range</a>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/blog/Frame3.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-white">
-                Check out our new hair care range
-              </h5>
-              <p class="text-white">
-                <a href="/products/category/4" class="btn btn-default">take me there</a>
-              </p>
+                <h2 class="text-white">
+                    Extracts from nature's best offerings
+                </h2>
+                <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Shop Now</a>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/blog/Frame4.jpg" alt="Third slide">
-            {{--<div class="carousel-caption d-none d-md-block">
-              <h5>Shop all our products</h5>
-              <p>All products are inspired by mother nature</p>
-            </div>--}}
+            <div class="carousel-caption d-none d-md-block">
+                <h2 class="text-white">
+                    Skin, Body & Hair
+                </h2>
+                <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
+            </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/blog/Frame2.jpg" alt="Fourth slide">
-            {{--<div class="carousel-caption d-none d-md-block">
-              <h5>Shop all our products</h5>
-              <p>All products are inspired by mother nature</p>
-            </div>--}}
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-white">
-                Go natural and organic, spring clean your skin from nasties
-              </h5>
-              <p class="text-white">
-                  <a href="/products/category/1" class="btn btn-default">check out our range</a>
-              </p>
+                <h2 class="text-white">
+                    Phyto Medicine
+                </h2>
+                <a href="/products/category/1" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
             </div>
           </div>
         </div>
@@ -72,20 +68,20 @@
 <div class="products main-body" style="padding-bottom: 80px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-5">
-        <p>
+      <div class="col-md-6">
           <h3 class="text-black-50">Welcome to Ganic Roots</h3>
-          {{--<img src="{{ asset('/img/flyer.png') }}" class="img-responsive"/><br>--}}
-          We offer all-natural & organic handmade skin and hair products.
-          We are all about simple, powerful ways to nourish skin and hair. Our products contain ingredients that are
-          extracted from nature with no harmful, synthetic ingredients that are in so many
-          of today's skin and hair products. We believe in keeping it clean and natural.
-          So shop with us, we know you will love what you find.
-          <br><br>
-          <a href="/products/" class="btn btn-primary">Check our products</a>
-        </p>
+          <p>
+              {{--<img src="{{ asset('/img/flyer.png') }}" class="img-responsive"/><br>--}}
+              We offer all-natural & organic handmade products. We are all about simple, holistic & powerful ways to
+              nourish the body, inside-out. Our products contain ingredients that are extracted from nature with no harmful,
+              synthetic ingredients that are in so many of today’s products. We believe in keeping it clean and natural.
+              <br><br>
+              If this is who you are, come shop with us. We know you will love what you find.
+              <br><br>
+              <a href="/products/" class="btn btn-primary">Shop Now</a>
+          </p>
       </div>
-      <div class="col col-md-5 offset-md-1">
+      <div class="col col-md-6">
         @guest
         <div class="card border-0 shadow-sm">
           <div class="card-header bg-light mb-3">
@@ -173,8 +169,8 @@
         </div>
         @else
             <p class="text-center">
-                {{--<img src="/img/organiclogo.png" class="img-responsive col-md-9" />--}}
-                <img src="/img/organic-logo.png" class="img-fluid" />
+                <img src="/img/organiclogo.png" class="img-responsive col-md-9" />
+{{--                <img src="/img/organic-logo.png" class="img-fluid" />--}}
             </p>
         @endguest
       </div>
@@ -184,19 +180,15 @@
 
 
 <div class="products">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="flex-row col-md-3 col-xs-12"></div>
-      <div class="flex-row col-md-6 col-xs-12">
-        <p>
+      <div class="flex-row col">
           <h3 class="text-black-50">Our Promise</h3>
-          Our products are extracts from nature's best offerings.
-          Keep it clean and natural, love and nourish your
-          hair and skin the Ganic Roots way.
-        </p>
+          <p>
+              Our products are extracts from nature’s best offerings. Keep it clean and natural the Ganic Roots way.
+          </p>
       </div>
     </div>
-    <div class="col col-md-3 col-xs-12"></div>
   </div>
 </div>
 

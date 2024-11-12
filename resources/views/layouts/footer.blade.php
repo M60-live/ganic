@@ -15,12 +15,11 @@
                       </form>
                   </div>--}}
                   <div class="">
-                    <div class="footer_title">Social</div>
+                    <div class="footer_title">Follow us</div>
                     <ul class="footer_social_list d-flex flex-row align-items-start justify-content-start menu-list">
-                      <li><a href="https://www.facebook.com/GanicRootsZA/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      {{--<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>--}}
-                      {{--<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>--}}
-                      <li><a href="https://www.instagram.com/ganic_roots/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/ganic_roots" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/ganic.roots" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -46,10 +45,10 @@
                       <a href="#"><div>Customer Service</div></a>
                     </li>--}}
                     <li>
-                      <a href="#"><div>Terms and Conditions</div></a>
+                      <a href="/contact_form"><i class="fa fa-chevron-right mr-2" style="color: #969696; font-size: 12px;"></i>Contact Us</a>
                     </li>
                     <li>
-                      <a href="#"><div>Return Policy</div></a>
+                      <a href="/faqs"><i class="fa fa-chevron-right mr-2" style="color: #969696; font-size: 12px;"></i>FAQ's</a>
                     </li>
                   </ul>
                 </div>

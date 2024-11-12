@@ -29,7 +29,8 @@ flush();
   <meta name="csrf-token" content="{{  csrf_token() }}">
 
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" />
-  <link href="{{asset('css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+{{--  <link href="{{asset('css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />--}}
+  <link href="{{asset('css/fontawesome5/css/all.min.css')}}" rel="stylesheet" />
   <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet" />
   <link href="{{asset('css/owl.theme.default.css')}}" rel="stylesheet" />
   <link href="{{asset('css/animate.css')}}" rel="stylesheet" />
@@ -101,14 +102,13 @@ flush();
 
     <div class="menu_contact">
       <div class="menu_phone d-flex flex-row align-items-center justify-content-start">
-        <i class="fa fa-envelope-o"></i><div> info@ganicroots.co.za</div>
+        <i class="far fa-envelope"></i><div>info@ganicroots.co.za</div>
       </div>
       <div class="menu_social">
         <ul class="menu_social_list d-flex flex-row align-items-start justify-content-start menu-list">
-          <li><a href="https://www.facebook.com/GanicRootsZA/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          {{--<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>--}}
-          {{--<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>--}}
-          <li><a href="https://www.instagram.com/ganic_roots/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/ganic_roots" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/ganic.roots" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
         </ul>
       </div>
     </div>
