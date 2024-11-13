@@ -1961,7 +1961,8 @@ button.bg-light:hover{
 .product_image{
 	max-height: 200px;
 	overflow: hidden;
-	/*overflow-style: none;*/
+    display: flex;
+    align-items: center;
 }
 
 .product_image img {
