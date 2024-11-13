@@ -1957,8 +1957,8 @@ button.bg-light:hover{
   background-repeat: no-repeat;
 }
 
-.product_image{
-	max-height: 200px;
+.product_image {
+	max-height: 230px;
 	overflow: hidden;
     display: flex;
     align-items: center;

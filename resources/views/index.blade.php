@@ -6,7 +6,7 @@
   <div class="container-fluid">
     {{--<div class="row banner">--}}
     <div class="row">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;" data-interval="10000">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;" data-interval="1000">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -31,7 +31,7 @@
                 <h2 class="text-white mb-4">
                     Extracts from nature's best offerings
                 </h2>
-                <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Shop Now</a>
+                <a href="/products" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Shop Now</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -41,7 +41,7 @@
                 <h2 class="text-white mb-4">
                     Skin, Body & Hair
                 </h2>
-                <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
+                <a href="/products/category/1" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -51,7 +51,7 @@
                 <h2 class="text-white mb-4">
                     Phyto Medicine
                 </h2>
-                <a href="/products/category/1" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
+                <a href="/products/category/2" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
             </div>
           </div>
         </div>
