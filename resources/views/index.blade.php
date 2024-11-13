@@ -186,7 +186,7 @@
   <div class="container">
       <div class="row">
           @foreach($featuredProducts as $product)
-              <div class="col">
+              <div class="col col-md-4">
                   <div class="product">
                       <div class="product_image">
                           @if($product->instock=='1')
