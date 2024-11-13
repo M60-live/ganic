@@ -25,11 +25,11 @@
   <meta name="csrf-token" content="{{  csrf_token() }}">
 
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" />
-  <link href="{{asset('css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/fontawesome5/css/all.min.css')}}" rel="stylesheet" />
   <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet" />
   <link href="{{asset('css/owl.theme.default.css')}}" rel="stylesheet" />
   <link href="{{asset('css/animate.css')}}" rel="stylesheet" />
-  <link href="{{asset('css/main_styles.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/main_styles.css?v=1')}}" rel="stylesheet" />
   <link href="{{asset('css/responsive.css')}}" rel="stylesheet" />
 
   @yield('stylesheet')
