@@ -28,7 +28,7 @@
               <!-- About -->
               <div class="flex-row col-lg-4 footer_col">
                 <div class="footer_menu">
-                  <div class="footer_title" style="padding-left: 55px; padding-bottom: 15px;"><img src="/img/logo2.png" class="img-responsive" style="max-width: 100px;"/></div>
+                  <div class="footer_title" style="padding-left: 55px;"><img src="/img/logo2_main_square.png" class="img-responsive" style="max-width: 180px;"/></div>
                   {{--<div class="footer_title">Our Promise</div>--}}
                   <div class="footer_about_text">
                     <p>Proudly South African handmade skin and hair products. Hypoallergenic and made in small batches.</p>
