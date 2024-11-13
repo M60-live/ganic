@@ -28,4 +28,16 @@ class Products extends Model
             ->paginate(3);
         return $products;
     }
+
+    public function get_featured_products()
+    {
+        $Products = DB::table('products')
+            ->join('category','products.categoryid','=','category.id')
+            ->where('products.enabled','=','1')
+            ->orderBy('products.created_at','desc')
+            ->limit(3)
+            ->select('products.*','category.id as cat_id','category.value as category_name')
+            ->get();
+        return $Products;
+    }
 }

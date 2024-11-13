@@ -173,7 +173,7 @@
         </div>
         @else
             <p class="text-center">
-                <img src="/img/organiclogo.png" class="img-responsive col-md-9" />
+                <img src="/img/organiclogo.png" class="img-responsive col-md-6" />
 {{--                <img src="/img/organic-logo.png" class="img-fluid" />--}}
             </p>
         @endguest
@@ -181,6 +181,55 @@
     </div>
   </div>
 </div>
+
+
+  <div class="container">
+      <div class="row">
+          @foreach($featuredProducts as $product)
+              <div class="col">
+                  <div class="product">
+                      <div class="product_image">
+                          @if($product->instock=='1')
+                              <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" alt="" /></a>
+                          @else
+                              <div class="out-of-stock">Out of stock</div>
+                              <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><img src="{{ asset('storage/products/'.$product->img_dir.env("APP_VERSION")) }}" alt="" /></a>
+                          @endif
+
+                      </div>
+                      <div class="product_content">
+                          <div class="product_info d-flex flex-row align-items-start justify-content-start">
+                              <div>
+                                  <div>
+                                      <div class="product_name">
+                                          @if($product->instock=='0')
+                                              <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}"><strike>{{ $product->value }}</strike></a>
+                                          @else
+                                              <a href="/products/view/{{ $product->cat_id }}/{{ $product->id }}/{{ $product->category_name }}" title="{{ $product->value }}">{{ $product->value }}</a>
+                                          @endif
+                                      </div>
+                                      <div class="product_category">
+                                          In <a href="/products/category/{{ $product->cat_id }}">{{ $product->category_name }}</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="product_price">
+                                  R{{ substr($product->price,0,strpos($product->price,".")) }}<span>{{ substr($product->price,strpos($product->price,".")) }}</span>
+                              </div>
+                          </div>
+                          @if(auth()->check())
+                              <div class="product_buttons">
+                                  <div class="text-right d-flex flex-row align-items-start justify-content-start">
+
+                                  </div>
+                              </div>
+                          @endif
+                      </div>
+                  </div>
+              </div>
+          @endforeach
+      </div>
+  </div>
 
 
 <div class="products">
