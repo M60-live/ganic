@@ -15,36 +15,40 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="/img/blog/Frame.jpg" alt="First slide" />
+            <img class="d-block w-100" src="/img/banner/Frame1.png" alt="First slide" />
             <div class="carousel-caption d-none d-md-block">
-                <h2 class="text-white">
+                <img class="w-25 mb-5" src="/img/logo_icon_green.png">
+                <h2 class="text-white mb-4">
                     Simple, Natural & Backed by Science
                 </h2>
                 <a href="/products" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Check Our Range</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/blog/Frame3.jpg" alt="Second slide">
+            <img class="d-block w-100" src="/img/banner/Frame2.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-                <h2 class="text-white">
+                <img class="w-25 mb-5" src="/img/logo_icon_green.png">
+                <h2 class="text-white mb-4">
                     Extracts from nature's best offerings
                 </h2>
                 <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Shop Now</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/blog/Frame4.jpg" alt="Third slide">
+            <img class="d-block w-100" src="/img/banner/Frame3.png" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-                <h2 class="text-white">
+                <img class="w-25 mb-5" src="/img/logo_icon_green.png">
+                <h2 class="text-white mb-4">
                     Skin, Body & Hair
                 </h2>
                 <a href="/products/category/4" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/blog/Frame2.jpg" alt="Fourth slide">
+            <img class="d-block w-100" src="/img/banner/Frame4.png" alt="Fourth slide">
             <div class="carousel-caption d-none d-md-block">
-                <h2 class="text-white">
+                <img class="w-25 mb-5" src="/img/logo_icon_green.png">
+                <h2 class="text-white mb-4">
                     Phyto Medicine
                 </h2>
                 <a href="/products/category/1" class="btn btn-default"><span class="fa fa-shopping-bag text-white"></span> Take Me There</a>
@@ -93,7 +97,7 @@
             <div class="form-group row">
               <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
               <div class="col-md-8">
-                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required />
                 @if ($errors->has('name'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('name') }}</strong>
@@ -105,7 +109,7 @@
             <div class="form-group row">
               <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
               <div class="col-md-8">
-                <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required autofocus>
+                <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required />
                 @if ($errors->has('surname'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('surname') }}</strong>
@@ -117,7 +121,7 @@
             <div class="form-group row">
               <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
               <div class="col-md-8">
-                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required />
                 @if ($errors->has('email'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('email') }}</strong>
@@ -129,7 +133,7 @@
             <div class="form-group row">
               <label for="phone_number" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
               <div class="col-md-8">
-                <input id="phone_number" type="text" class="form-control{{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required>
+                <input id="phone_number" type="text" class="form-control{{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required />
                 @if ($errors->has('phone_number'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('phone_number') }}</strong>
@@ -141,7 +145,7 @@
             <div class="form-group row">
               <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
               <div class="col-md-8">
-                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required />
                 @if ($errors->has('password'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('password') }}</strong>
@@ -153,7 +157,7 @@
             <div class="form-group row">
               <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
               <div class="col-md-8">
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required />
               </div>
             </div>
 
