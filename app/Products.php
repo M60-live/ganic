@@ -29,13 +29,13 @@ class Products extends Model
         return $products;
     }
 
-    public function get_featured_products()
+    public function get_featured_products($limit = 3)
     {
         $Products = DB::table('products')
             ->join('category','products.categoryid','=','category.id')
             ->where('products.enabled','=','1')
             ->orderBy('products.created_at','desc')
-            ->limit(3)
+            ->limit($limit)
             ->select('products.*','category.id as cat_id','category.value as category_name')
             ->get();
         return $Products;

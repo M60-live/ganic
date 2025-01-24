@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $categories = DB::table('category')->get();
         $posts      = DB::table('blog')->get()->sortByDesc('id')->toArray();
-        $featuredProducts = (new Products())->get_featured_products();
+        $featuredProducts = (new Products())->get_featured_products(3);
         return view('index', ['categories' => $categories, 'posts' => $posts, 'category_active' => 'all', 'featuredProducts' => $featuredProducts]);
     }
 

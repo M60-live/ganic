@@ -25,8 +25,8 @@
         <div class="row">
           <div class="flex-row col-md-5 offset-md-1">
             <div class="">
-              <div class="card">
-                <div class="card-header"><h4 class="text-black-50">Shipping Details</h4></div>
+              <div class="card primary-border">
+                <div class="card-header primary-border primary-background"><h4 class=" text-center text-white">Shipping Details</h4></div>
                 <div class="card-body">
                   <table class="table">
                     <tr>
@@ -46,8 +46,8 @@
           </div>
           <div class="flex-row col-md-5">
             <div class="product">
-              <div class="card">
-                <div class="card-header"><h4 class="text-black-50">Your checkout details</h4></div>
+              <div class="card primary-border">
+                <div class="card-header primary-background"><h4 class="text-white">Your checkout details</h4></div>
                 <div class="card-body">
                   <table class="table border-0">
                       <?php $cnt=1; ?>

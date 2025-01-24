@@ -16,7 +16,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="/img/banner/Frame1.png" alt="First slide" />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
                 <img class="w-25 mb-5" src="/img/logo_icon_green.png">
                 <h2 class="text-white mb-4">
                     Simple, Natural & Backed by Science
@@ -26,7 +26,7 @@
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/banner/Frame2.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
                 <img class="w-25 mb-5" src="/img/logo_icon_green.png">
                 <h2 class="text-white mb-4">
                     Extracts from nature's best offerings
@@ -36,7 +36,7 @@
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/banner/Frame3.png" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
                 <img class="w-25 mb-5" src="/img/logo_icon_green.png">
                 <h2 class="text-white mb-4">
                     Skin, Body & Hair
@@ -46,7 +46,7 @@
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/banner/Frame4.png" alt="Fourth slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
                 <img class="w-25 mb-5" src="/img/logo_icon_green.png">
                 <h2 class="text-white mb-4">
                     Phyto Medicine
@@ -173,7 +173,7 @@
         </div>
         @else
             <p class="text-center">
-                <img src="/img/organiclogo.png" class="img-responsive col-md-6" />
+                <img src="/img/organiclogo.png" class="img-responsive col-5" />
 {{--                <img src="/img/organic-logo.png" class="img-fluid" />--}}
             </p>
         @endguest
@@ -228,6 +228,7 @@
                   </div>
               </div>
           @endforeach
+          <div class="col text-center"><a href="/products" class="btn btn-primary"><span class="fa fa-shopping-bag text-white"></span> Shop more products</a></div>
       </div>
   </div>
 
