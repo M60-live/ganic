@@ -106,9 +106,12 @@ class ProductsController extends Controller
         $Product = new Products();
         $categories = DB::table('category')->get();
         $ProductDetails  = $Product->product_details($id);
-        $RelatedProducts = $Product->related_products($ProductDetails->id, $ProductDetails->categoryid);
+        if (empty($ProductDetails))
+            return redirect()->action('ProductsController@index');
 
+        $RelatedProducts = $Product->related_products($ProductDetails->id, $ProductDetails->categoryid);
         $product_options = $this::get_products_options($ProductDetails->id);
+
         return view('product_details',['categories'=>$categories,'category_active'=>$id_category,'category_name'=>$category_name,'product_details' => $ProductDetails, 'relatedProducts' => $RelatedProducts, 'product_options'=>$product_options]);
     }
 
