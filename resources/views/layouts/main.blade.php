@@ -34,7 +34,7 @@ flush();
   <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet" />
   <link href="{{asset('css/owl.theme.default.css')}}" rel="stylesheet" />
   <link href="{{asset('css/animate.css')}}" rel="stylesheet" />
-  <link href="{{asset('css/main_styles.css?v=2')}}" rel="stylesheet" />
+  <link href="{{asset('css/main_styles.css?v=3')}}" rel="stylesheet" />
   <link href="{{asset('css/responsive.css')}}" rel="stylesheet" />
 
   @yield('stylesheet')
