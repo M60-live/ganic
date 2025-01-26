@@ -108,7 +108,7 @@ flush();
         <ul class="menu_social_list d-flex flex-row align-items-start justify-content-start menu-list">
             <li><a href="https://www.instagram.com/ganic_roots" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="https://www.facebook.com/ganic.roots" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-            <li><a href="https://tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ganicrootssa"><i class="fab fa-tiktok"></i></a></li>
         </ul>
       </div>
     </div>
