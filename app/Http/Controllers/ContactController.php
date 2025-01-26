@@ -57,7 +57,7 @@ class ContactController extends Controller
     if($bValid)
     {
       $results = Mail::to($email)->send(new SystemMails($name,$email,$phone_number,$message));
-      $adminResults = Mail::to("sipho@alphatobeta.co.za")->send(new SystemMails($name,$email,$phone_number,$message,'admin'));
+      $adminResults = Mail::to("thembi@ganicroots.co.za")->send(new SystemMails($name,$email,$phone_number,$message,'admin'));
       $response = json_encode($results);
     }
     else
